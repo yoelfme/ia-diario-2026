@@ -13,7 +13,9 @@ class CalendarEvent(BaseModel):
 MODEL = "gpt-5-mini-2025-08-07"
 SYSTEM_PROMPT = """
 Extract the event information. 
-If there is no date defined, set the date to today."""
+Considerations:
+- If there is no date defined, set the date to today.
+- The date should be in the format DD/MM/YYYY."""
 
 DEFAULT_USER_PROMPT = "Alice and Bob are going to a science fair on Friday."
 
@@ -45,6 +47,11 @@ def main():
     print(f"The name of the event is: {event.name}")
     print(f"The date of the event is: {event.date}")
     print(f"The participants of the event are: {event.participants}")
+
+    # Convert the Pydantic object to JSON output (model_dump_json returns a JSON string)
+    # event_json = event.model_dump_json(indent=2)
+    # print("Event as JSON:")
+    # print(event_json)
     
 # run the main function
 main()
