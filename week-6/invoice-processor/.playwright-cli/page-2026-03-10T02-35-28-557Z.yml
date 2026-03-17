@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e26]: Invoice Processor
+  - main [ref=e204]:
+    - generic [ref=e205]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - paragraph [ref=e209]: Flujo de digitalización
+          - heading "Facturas físicas o PDFs, normalizadas a JSON listo para revisar." [level=1] [ref=e210]
+          - paragraph [ref=e211]: Sube una factura, el API la procesa con OpenAI, valida si realmente es una factura y la deja en estado POR_REVISAR para edición o aprobación.
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - paragraph [ref=e215]: Nueva carga
+            - heading "Procesar documento" [level=2] [ref=e216]
+          - generic [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]: PHOTO-2026-03-09-20-18-11.jpg
+            - generic [ref=e219]: Cualquier otro tipo será rechazado por el backend.
+          - button "Procesando…" [disabled] [ref=e248]
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - paragraph [ref=e224]: Repositorio reciente
+            - heading "Facturas procesadas" [level=2] [ref=e225]
+          - generic [ref=e226]: 2 registradas
+        - generic [ref=e227]:
+          - 'link "9/03/2026, 8:33 p. m. BELLUNO, S.A. Por revisar Consumidor: Consumidor Final AQUI Archivo: PHOTO-2026-03-09-19-16-22.jpg Q 15.00" [ref=e228] [cursor=pointer]':
+            - /url: /invoices/8cef9ce1-377a-45b1-affa-ab05182f6ef3
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - paragraph [ref=e231]: 9/03/2026, 8:33 p. m.
+                - heading "BELLUNO, S.A." [level=3] [ref=e232]
+              - generic [ref=e233]: Por revisar
+            - generic [ref=e234]:
+              - paragraph [ref=e235]: "Consumidor: Consumidor Final AQUI"
+              - paragraph [ref=e236]: "Archivo: PHOTO-2026-03-09-19-16-22.jpg"
+            - paragraph [ref=e237]: Q 15.00
+          - 'link "9/03/2026, 8:31 p. m. BELLUNO, S.A. Por revisar Consumidor: REYES FLORES, GEORGEAN EDILZAR Archivo: PHOTO-2026-03-09-19-15-03.jpg Q 25.00" [ref=e238] [cursor=pointer]':
+            - /url: /invoices/8d9d8e4c-6efc-4daa-b3a7-78b49f08535f
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - paragraph [ref=e241]: 9/03/2026, 8:31 p. m.
+                - heading "BELLUNO, S.A." [level=3] [ref=e242]
+              - generic [ref=e243]: Por revisar
+            - generic [ref=e244]:
+              - paragraph [ref=e245]: "Consumidor: REYES FLORES, GEORGEAN EDILZAR"
+              - paragraph [ref=e246]: "Archivo: PHOTO-2026-03-09-19-15-03.jpg"
+            - paragraph [ref=e247]: Q 25.00

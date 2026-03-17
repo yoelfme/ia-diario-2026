@@ -1,0 +1,83 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e26]
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - link "Volver al tablero" [ref=e31] [cursor=pointer]:
+            - /url: /
+          - heading "BELLUNO, S.A." [level=1] [ref=e32]
+          - paragraph [ref=e33]: Procesada el 9/03/2026, 8:31 p. m. desde PHOTO-2026-03-09-19-15-03.jpg
+        - generic [ref=e34]: Por revisar
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - paragraph [ref=e39]: Datos extraídos
+              - heading "Revisión manual" [level=2] [ref=e40]
+            - generic [ref=e41]:
+              - paragraph [ref=e42]: Última actualización
+              - paragraph [ref=e43]: 9/03/2026, 8:31 p. m.
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - text: Nombre del consumidor
+              - textbox "Nombre del consumidor" [ref=e46]: REYES FLORES, GEORGEAN EDILZAR
+            - generic [ref=e47]:
+              - text: NIT consumidor
+              - textbox "NIT consumidor" [ref=e48]: "112593534"
+            - generic [ref=e49]:
+              - text: Nombre del productor
+              - textbox "Nombre del productor" [ref=e50]: BELLUNO, S.A.
+            - generic [ref=e51]:
+              - text: NIT productor
+              - textbox "NIT productor" [ref=e52]: 555973-1
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - heading "Ítems" [level=3] [ref=e55]
+              - button "Agregar ítem" [ref=e56]
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - textbox [ref=e59]: "1"
+                - textbox [ref=e60]: NORM.P
+                - spinbutton [ref=e61]: "0"
+                - button "Quitar" [ref=e62]
+              - generic [ref=e63]:
+                - textbox [ref=e64]: "1"
+                - textbox [ref=e65]: 7-UP M
+                - spinbutton [ref=e66]: "0"
+                - button "Quitar" [ref=e67]
+              - generic [ref=e68]:
+                - textbox [ref=e69]: "1"
+                - textbox [ref=e70]: SLID+PAP M
+                - spinbutton [ref=e71]: "25"
+                - button "Quitar" [ref=e72]
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - text: Subtotal
+              - spinbutton "Subtotal" [ref=e75]: "25"
+            - generic [ref=e76]:
+              - text: Impuestos
+              - spinbutton "Impuestos" [ref=e77]: "0"
+            - generic [ref=e78]:
+              - text: Total
+              - spinbutton "Total" [ref=e79]: "25"
+          - generic [ref=e80]:
+            - button "Guardar cambios" [ref=e81]
+            - button "Aprobar factura" [ref=e82]
+            - button "Regresar al listado" [ref=e83]
+        - complementary [ref=e84]:
+          - generic [ref=e85]:
+            - paragraph [ref=e86]: Documento fuente
+            - img "Factura PHOTO-2026-03-09-19-15-03.jpg" [ref=e88]
+          - generic [ref=e89]:
+            - paragraph [ref=e90]: Resumen
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - term [ref=e93]: Subtotal
+                - definition [ref=e94]: Q 25.00
+              - generic [ref=e95]:
+                - term [ref=e96]: Impuestos
+                - definition [ref=e97]: Q 0.00
+              - generic [ref=e98]:
+                - term [ref=e99]: Total
+                - definition [ref=e100]: Q 25.00

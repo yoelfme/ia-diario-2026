@@ -1,0 +1,24 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Flujo de digitalización
+          - heading "Facturas físicas o PDFs, normalizadas a JSON listo para revisar." [level=1] [ref=e8]
+          - paragraph [ref=e9]: Sube una factura, el API la procesa con OpenAI, valida si realmente es una factura y la deja en estado POR_REVISAR para edición o aprobación.
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - paragraph [ref=e13]: Nueva carga
+            - heading "Procesar documento" [level=2] [ref=e14]
+          - generic [ref=e15] [cursor=pointer]:
+            - generic [ref=e16]: Selecciona un PNG, JPG o PDF
+            - generic [ref=e17]: Cualquier otro tipo será rechazado por el backend.
+          - button "Subir y procesar factura" [disabled] [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Repositorio reciente
+            - heading "Facturas procesadas" [level=2] [ref=e23]
+          - generic [ref=e24]: 0 registradas
+        - generic [ref=e25]: Todavía no hay facturas procesadas.
+  - alert [ref=e26]

@@ -1,0 +1,118 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e46]
+  - main [ref=e47]:
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - link "Volver al tablero" [ref=e51] [cursor=pointer]:
+            - /url: /
+          - heading "SUMA REU LAS PALMAS GRUPO DE TIENDAS ASOCIADAS, S.A." [level=1] [ref=e52]
+          - paragraph [ref=e53]: Procesada el 9/03/2026, 8:38 p. m. desde PHOTO-2026-03-09-20-18-11.jpg
+        - generic [ref=e54]: Por revisar
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - paragraph [ref=e59]: Datos extraídos
+              - heading "Revisión manual" [level=2] [ref=e60]
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: Última actualización
+              - paragraph [ref=e63]: 9/03/2026, 8:38 p. m.
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - text: Nombre del consumidor
+              - textbox "Nombre del consumidor" [ref=e66]: CONSUMIDOR FINAL
+            - generic [ref=e67]:
+              - text: NIT consumidor
+              - textbox "NIT consumidor" [ref=e68]: CF
+            - generic [ref=e69]:
+              - text: Nombre del productor
+              - textbox "Nombre del productor" [ref=e70]: SUMA REU LAS PALMAS GRUPO DE TIENDAS ASOCIADAS, S.A.
+            - generic [ref=e71]:
+              - text: NIT productor
+              - textbox "NIT productor" [ref=e72]: "103319700"
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - heading "Ítems" [level=3] [ref=e75]
+              - button "Agregar ítem" [ref=e76]
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - textbox [ref=e79]: "1"
+                - textbox [ref=e80]: Chorizo CARNESPA T
+                - spinbutton [ref=e81]: "49.95"
+                - button "Quitar" [ref=e82]
+              - generic [ref=e83]:
+                - textbox [ref=e84]: "1"
+                - textbox [ref=e85]: Gaseosa COCA COLA
+                - spinbutton [ref=e86]: "20"
+                - button "Quitar" [ref=e87]
+              - generic [ref=e88]:
+                - textbox [ref=e89]: "1"
+                - textbox [ref=e90]: Bebida Hidratante
+                - spinbutton [ref=e91]: "5.5"
+                - button "Quitar" [ref=e92]
+              - generic [ref=e93]:
+                - textbox [ref=e94]: "1"
+                - textbox [ref=e95]: Bebida Hidratante
+                - spinbutton [ref=e96]: "5.5"
+                - button "Quitar" [ref=e97]
+              - generic [ref=e98]:
+                - textbox [ref=e99]: "1"
+                - textbox [ref=e100]: Bebida Hidratante
+                - spinbutton [ref=e101]: "5.5"
+                - button "Quitar" [ref=e102]
+              - generic [ref=e103]:
+                - textbox [ref=e104]: 3 UND
+                - textbox [ref=e105]: SIN DESCRIPCION
+                - spinbutton [ref=e106]: "7.65"
+                - button "Quitar" [ref=e107]
+              - generic [ref=e108]:
+                - textbox [ref=e109]: 2 UND
+                - textbox [ref=e110]: Leche Liquida FORE
+                - spinbutton [ref=e111]: "22.95"
+                - button "Quitar" [ref=e112]
+              - generic [ref=e113]:
+                - textbox [ref=e114]: "1"
+                - textbox [ref=e115]: SIN DESCRIPCION
+                - spinbutton [ref=e116]: "0.75"
+                - button "Quitar" [ref=e117]
+              - generic [ref=e118]:
+                - textbox [ref=e119]: "1"
+                - textbox [ref=e120]: Bolsa Empaque SUMA
+                - spinbutton [ref=e121]: "1.5"
+                - button "Quitar" [ref=e122]
+              - generic [ref=e123]:
+                - textbox [ref=e124]: "1"
+                - textbox [ref=e125]: Crema LACTOLAC Bol
+                - spinbutton [ref=e126]: "21.45"
+                - button "Quitar" [ref=e127]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - text: Subtotal
+              - spinbutton "Subtotal" [ref=e130]: "132.35"
+            - generic [ref=e131]:
+              - text: Impuestos
+              - spinbutton "Impuestos" [ref=e132]: "0"
+            - generic [ref=e133]:
+              - text: Total
+              - spinbutton "Total" [ref=e134]: "132.35"
+          - generic [ref=e135]:
+            - button "Guardar cambios" [ref=e136]
+            - button "Aprobar factura" [ref=e137]
+            - button "Regresar al listado" [ref=e138]
+        - complementary [ref=e139]:
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Documento fuente
+            - img "Factura PHOTO-2026-03-09-20-18-11.jpg" [ref=e143]
+          - generic [ref=e144]:
+            - paragraph [ref=e145]: Resumen
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - term [ref=e148]: Subtotal
+                - definition [ref=e149]: Q 132.35
+              - generic [ref=e150]:
+                - term [ref=e151]: Impuestos
+                - definition [ref=e152]: Q 0.00
+              - generic [ref=e153]:
+                - term [ref=e154]: Total
+                - definition [ref=e155]: Q 132.35

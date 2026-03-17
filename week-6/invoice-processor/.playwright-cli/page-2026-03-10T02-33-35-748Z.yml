@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e26]
+  - main [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - link "Volver al tablero" [ref=e139] [cursor=pointer]:
+            - /url: /
+          - heading "BELLUNO, S.A." [level=1] [ref=e140]
+          - paragraph [ref=e141]: Procesada el 9/03/2026, 8:33 p. m. desde PHOTO-2026-03-09-19-16-22.jpg
+        - generic [ref=e142]: Por revisar
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - paragraph [ref=e147]: Datos extraídos
+              - heading "Revisión manual" [level=2] [ref=e148]
+            - generic [ref=e149]:
+              - paragraph [ref=e150]: Última actualización
+              - paragraph [ref=e151]: 9/03/2026, 8:33 p. m.
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - text: Nombre del consumidor
+              - textbox "Nombre del consumidor" [ref=e154]: Consumidor Final AQUI
+            - generic [ref=e155]:
+              - text: NIT consumidor
+              - textbox "NIT consumidor" [ref=e156]: CF
+            - generic [ref=e157]:
+              - text: Nombre del productor
+              - textbox "Nombre del productor" [ref=e158]: BELLUNO, S.A.
+            - generic [ref=e159]:
+              - text: NIT productor
+              - textbox "NIT productor" [ref=e160]: 555973-1
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - heading "Ítems" [level=3] [ref=e163]
+              - button "Agregar ítem" [ref=e164]
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - textbox [ref=e167]: "1"
+                - textbox [ref=e168]: TE FRAMBUESA M
+                - spinbutton [ref=e169]: "0"
+                - button "Quitar" [ref=e170]
+              - generic [ref=e171]:
+                - textbox [ref=e172]: "1"
+                - textbox [ref=e173]: CHALUPA BAJA
+                - spinbutton [ref=e174]: "15"
+                - button "Quitar" [ref=e175]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - text: Subtotal
+              - spinbutton "Subtotal" [ref=e178]: "15"
+            - generic [ref=e179]:
+              - text: Impuestos
+              - spinbutton "Impuestos" [ref=e180]: "0"
+            - generic [ref=e181]:
+              - text: Total
+              - spinbutton "Total" [ref=e182]: "15"
+          - generic [ref=e183]:
+            - button "Guardar cambios" [ref=e184]
+            - button "Aprobar factura" [ref=e185]
+            - button "Regresar al listado" [ref=e186]
+        - complementary [ref=e187]:
+          - generic [ref=e188]:
+            - paragraph [ref=e189]: Documento fuente
+            - img "Factura PHOTO-2026-03-09-19-16-22.jpg" [ref=e191]
+          - generic [ref=e192]:
+            - paragraph [ref=e193]: Resumen
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - term [ref=e196]: Subtotal
+                - definition [ref=e197]: Q 15.00
+              - generic [ref=e198]:
+                - term [ref=e199]: Impuestos
+                - definition [ref=e200]: Q 0.00
+              - generic [ref=e201]:
+                - term [ref=e202]: Total
+                - definition [ref=e203]: Q 15.00

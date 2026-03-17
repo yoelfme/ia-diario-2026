@@ -1,0 +1,34 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e26]
+  - main [ref=e101]:
+    - generic [ref=e102]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - paragraph [ref=e106]: Flujo de digitalización
+          - heading "Facturas físicas o PDFs, normalizadas a JSON listo para revisar." [level=1] [ref=e107]
+          - paragraph [ref=e108]: Sube una factura, el API la procesa con OpenAI, valida si realmente es una factura y la deja en estado POR_REVISAR para edición o aprobación.
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Nueva carga
+            - heading "Procesar documento" [level=2] [ref=e113]
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: PHOTO-2026-03-09-19-16-22.jpg
+            - generic [ref=e116]: Cualquier otro tipo será rechazado por el backend.
+          - button "Subir y procesar factura" [ref=e117]
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: Repositorio reciente
+            - heading "Facturas procesadas" [level=2] [ref=e122]
+          - generic [ref=e123]: 1 registradas
+        - 'link "9/03/2026, 8:31 p. m. BELLUNO, S.A. Por revisar Consumidor: REYES FLORES, GEORGEAN EDILZAR Archivo: PHOTO-2026-03-09-19-15-03.jpg Q 25.00" [ref=e125] [cursor=pointer]':
+          - /url: /invoices/8d9d8e4c-6efc-4daa-b3a7-78b49f08535f
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - paragraph [ref=e128]: 9/03/2026, 8:31 p. m.
+              - heading "BELLUNO, S.A." [level=3] [ref=e129]
+            - generic [ref=e130]: Por revisar
+          - generic [ref=e131]:
+            - paragraph [ref=e132]: "Consumidor: REYES FLORES, GEORGEAN EDILZAR"
+            - paragraph [ref=e133]: "Archivo: PHOTO-2026-03-09-19-15-03.jpg"
+          - paragraph [ref=e134]: Q 25.00

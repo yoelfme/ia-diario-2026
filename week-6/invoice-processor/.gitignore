@@ -1,0 +1,13 @@
+node_modules
+.turbo
+.next
+dist
+coverage
+*.log
+.env
+.env.local
+apps/api/data
+apps/api/uploads/*
+!apps/api/uploads/.gitkeep
+packages/db/drizzle
+

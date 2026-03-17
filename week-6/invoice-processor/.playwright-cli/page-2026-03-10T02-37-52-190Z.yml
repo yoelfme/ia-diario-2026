@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Flujo de digitalización
+          - heading "Facturas físicas o PDFs, normalizadas a JSON listo para revisar." [level=1] [ref=e8]
+          - paragraph [ref=e9]: Sube una factura, el API la procesa con OpenAI, valida si realmente es una factura y la deja en estado POR_REVISAR para edición o aprobación.
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - paragraph [ref=e13]: Nueva carga
+            - heading "Procesar documento" [level=2] [ref=e14]
+          - generic [ref=e15] [cursor=pointer]:
+            - generic [ref=e16]: Selecciona un PNG, JPG o PDF
+            - generic [ref=e17]: Cualquier otro tipo será rechazado por el backend.
+          - button "Subir y procesar factura" [disabled] [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Repositorio reciente
+            - heading "Facturas procesadas" [level=2] [ref=e23]
+          - generic [ref=e24]: 2 registradas
+        - generic [ref=e25]:
+          - 'link "9/03/2026, 8:33 p. m. BELLUNO, S.A. Por revisar Consumidor: Consumidor Final AQUI Archivo: PHOTO-2026-03-09-19-16-22.jpg Q 15.00" [ref=e26] [cursor=pointer]':
+            - /url: /invoices/8cef9ce1-377a-45b1-affa-ab05182f6ef3
+            - generic [ref=e27]:
+              - generic [ref=e28]:
+                - paragraph [ref=e29]: 9/03/2026, 8:33 p. m.
+                - heading "BELLUNO, S.A." [level=3] [ref=e30]
+              - generic [ref=e31]: Por revisar
+            - generic [ref=e32]:
+              - paragraph [ref=e33]: "Consumidor: Consumidor Final AQUI"
+              - paragraph [ref=e34]: "Archivo: PHOTO-2026-03-09-19-16-22.jpg"
+            - paragraph [ref=e35]: Q 15.00
+          - 'link "9/03/2026, 8:31 p. m. BELLUNO, S.A. Por revisar Consumidor: REYES FLORES, GEORGEAN EDILZAR Archivo: PHOTO-2026-03-09-19-15-03.jpg Q 25.00" [ref=e36] [cursor=pointer]':
+            - /url: /invoices/8d9d8e4c-6efc-4daa-b3a7-78b49f08535f
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: 9/03/2026, 8:31 p. m.
+                - heading "BELLUNO, S.A." [level=3] [ref=e40]
+              - generic [ref=e41]: Por revisar
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: "Consumidor: REYES FLORES, GEORGEAN EDILZAR"
+              - paragraph [ref=e44]: "Archivo: PHOTO-2026-03-09-19-15-03.jpg"
+            - paragraph [ref=e45]: Q 25.00
+  - alert [ref=e46]
