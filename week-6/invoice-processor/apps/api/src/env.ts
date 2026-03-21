@@ -1,10 +1,30 @@
 import { config } from 'dotenv';
+import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { z } from 'zod';
 
 const appDir = fileURLToPath(new URL('..', import.meta.url));
-const repoRoot = path.resolve(appDir, '..', '..');
+
+function findRepoRoot(startDir: string) {
+  let currentDir = startDir;
+
+  while (true) {
+    if (existsSync(path.join(currentDir, 'pnpm-workspace.yaml'))) {
+      return currentDir;
+    }
+
+    const parentDir = path.dirname(currentDir);
+
+    if (parentDir === currentDir) {
+      return path.resolve(appDir, '..', '..');
+    }
+
+    currentDir = parentDir;
+  }
+}
+
+const repoRoot = findRepoRoot(appDir);
 
 config({ path: path.join(repoRoot, '.env'), quiet: true });
 config({ path: path.join(appDir, '.env'), override: true, quiet: true });

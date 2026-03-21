@@ -2,6 +2,23 @@ import { mkdir, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import Database from 'better-sqlite3';
 
+const modernBaseline = '0000_hesitant_proudstar.sql';
+const legacyChain = new Set([
+  '0000_initial.sql',
+  '0001_categories_and_invoice_date.sql',
+  '0002_invoice_item_quantity_integer.sql',
+]);
+
+function tableExists(db: Database.Database, tableName: string) {
+  return Boolean(
+    db.prepare(`
+      SELECT 1
+      FROM sqlite_master
+      WHERE type = 'table' AND name = ?
+    `).get(tableName),
+  );
+}
+
 export async function runMigrations(params: {
   databaseUrl: string;
   repoRoot: string;
@@ -19,16 +36,29 @@ export async function runMigrations(params: {
     );
   `);
 
-  const files = (await readdir(migrationsDir))
+  const allFiles = (await readdir(migrationsDir))
     .filter((file) => file.endsWith('.sql'))
     .sort();
 
-  for (const file of files) {
-    const exists = db
-      .prepare('SELECT 1 FROM app_migrations WHERE name = ?')
-      .get(file);
+  const executedMigrationRows = db
+    .prepare('SELECT name FROM app_migrations')
+    .all() as Array<{ name: string }>;
+  const executedMigrations = new Set(
+    executedMigrationRows.map((row) => row.name),
+  );
+  const hasInvoicesTable = tableExists(db, 'invoices');
+  const shouldUseModernBaseline = !hasInvoicesTable && ![...executedMigrations].some((name) => legacyChain.has(name));
 
-    if (exists) {
+  const files = allFiles.filter((file) => {
+    if (shouldUseModernBaseline) {
+      return !legacyChain.has(file);
+    }
+
+    return file !== modernBaseline;
+  });
+
+  for (const file of files) {
+    if (executedMigrations.has(file)) {
       continue;
     }
 
@@ -42,8 +72,8 @@ export async function runMigrations(params: {
     });
 
     transaction();
+    executedMigrations.add(file);
   }
 
   db.close();
 }
-

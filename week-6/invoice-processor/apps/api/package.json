@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "dotenv -e ../../.env -- node --watch --import tsx src/index.ts",
     "build": "tsc -p tsconfig.json",
+    "start": "node dist/apps/api/src/index.js",
+    "migrate": "node dist/apps/api/src/db/migrate.js",
+    "start:prod": "node dist/apps/api/src/db/migrate.js && node dist/apps/api/src/index.js",
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit",

@@ -1,0 +1,15 @@
+.env
+.git
+.gitignore
+.next
+.pnpm-store
+.turbo
+node_modules
+output
+docs
+coverage
+dist
+apps/*/.next
+apps/*/dist
+packages/*/dist
+packages/*/.turbo

@@ -3,7 +3,7 @@ import postgres from 'postgres';
 import { drizzle as drizzlePg } from 'drizzle-orm/postgres-js';
 import { drizzle as drizzleSqlite } from 'drizzle-orm/better-sqlite3';
 
-export * from './schema';
+export * from './schema.js';
 
 export function createSqliteDb(databaseUrl: string) {
   const sqlite = new Database(databaseUrl);
@@ -19,4 +19,3 @@ export function createPostgresDb(databaseUrl: string) {
 
 export type SqliteDatabase = ReturnType<typeof createSqliteDb>;
 export type PostgresDatabase = ReturnType<typeof createPostgresDb>;
-
