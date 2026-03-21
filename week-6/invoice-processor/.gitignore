@@ -9,5 +9,3 @@ coverage
 apps/api/data
 apps/api/uploads/*
 !apps/api/uploads/.gitkeep
-packages/db/drizzle
-
