@@ -11,12 +11,12 @@ load_dotenv()
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 vector_store = PGVector(
     embeddings=embeddings,
-    collection_name="codigo_de_trabajo_guatemala",
+    collection_name="codigos_de_guatemala",
     connection="postgresql+psycopg://postgres:postgres@localhost:5432/week_8",
 )
 
 # query the vector store
-query = "¿Qué normas especiales existen para el trabajo femenino y infantil?"
+query = input("Ingresa tu consulta: ")
 
 results = vector_store.similarity_search(query=query)
 

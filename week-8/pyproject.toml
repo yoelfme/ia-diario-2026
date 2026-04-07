@@ -8,5 +8,6 @@ dependencies = [
     "langchain-community>=0.4.1",
     "langchain-openai>=1.1.12",
     "langchain-postgres>=0.0.17",
+    "langchain[openai]>=1.2.15",
     "pypdf>=6.9.2",
 ]
