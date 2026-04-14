@@ -59,6 +59,9 @@ dmypy.json
 *.swo
 *~
 
+# LangGraph local runtime
+.langgraph_api/
+
 # OS
 .DS_Store
 Thumbs.db
