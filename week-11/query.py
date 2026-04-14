@@ -10,7 +10,7 @@ embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 vector_store = PGVector(
     embeddings=embeddings,
     collection_name="codigos_de_guatemala",
-    connection="postgresql+psycopg://postgres:postgres@localhost:5432/week_8",
+    connection="postgresql+psycopg://postgres:postgres@localhost:5432/agentdb",
 )
 
 # query the vector store

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # load environment variables from .env file
 load_dotenv()
 
-file_path = "./docs/codigo-de-trabajo.pdf"
+file_path = "./docs/codigo-civil.pdf"
 
 loader = PyPDFLoader(file_path)
 
@@ -28,7 +28,7 @@ embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 vector_store = PGVector(
     embeddings=embeddings,
     collection_name="codigos_de_guatemala",
-    connection="postgresql+psycopg://postgres:postgres@localhost:5432/week_8",
+    connection="postgresql+psycopg://postgres:postgres@localhost:5432/agentdb",
 )
 
 # Store documents in the vector store   
