@@ -1,14 +1,14 @@
-# Week 8 — Vectors & Vector Store (RAG)
+# Week 11 — LangGraph RAG Agent
 
-Examples of document ingestion and semantic search using LangChain, OpenAI embeddings, and PGVector.
+Document ingestion and a **LangGraph**-backed RAG agent using LangChain, OpenAI embeddings, and PGVector.
 
-The project loads a PDF (`docs/codigo-de-trabajo.pdf`), splits it into chunks, generates embeddings, stores them in a PostgreSQL vector store, and lets you query them with similarity search.
+The project loads a PDF (`docs/codigo-civil.pdf`), splits it into chunks, generates embeddings, stores them in PostgreSQL, and exposes a compiled agent graph (`law_agent`) for LangGraph Studio or your own code.
 
 ## Prerequisites
 
 - Python 3.12+
 - [uv](https://docs.astral.sh/uv/) (package manager)
-- PostgreSQL with the `pgvector` extension enabled
+- Docker (for PostgreSQL + pgvector via Compose)
 - An OpenAI API key
 
 ## Setup
@@ -27,35 +27,44 @@ The project loads a PDF (`docs/codigo-de-trabajo.pdf`), splits it into chunks, g
    OPENAI_API_KEY=sk-your-key-here
    ```
 
-3. **Set up PostgreSQL with pgvector**
+3. **Start PostgreSQL with pgvector**
 
-   Run a PostgreSQL container with pgvector already enabled:
+   From this directory:
 
    ```bash
-   docker run -d \
-     --name pgvector \
-     -e POSTGRES_PASSWORD=postgres \
-     -e POSTGRES_DB=week_8 \
-     -p 5432:5432 \
-     pgvector/pgvector:pg18-trixie
+   docker compose up -d
    ```
 
-   The scripts connect to `postgresql+psycopg://postgres:postgres@localhost:5432/week_8` by default.
+   This uses [`compose.yml`](compose.yml): database `agentdb`, user/password `postgres`, port `5432`.
+
+   The app connects to `postgresql+psycopg://postgres:postgres@localhost:5432/agentdb`.
+
+4. **Ingest the PDF into the vector store**
+
+   ```bash
+   uv run ingestor.py
+   ```
+
+   This loads `docs/codigo-civil.pdf`, splits it into chunks of 1000 characters (with 200 overlap), generates embeddings with `text-embedding-3-large`, and stores them in the `codigos_de_guatemala` collection.
 
 ## Running
 
-### Ingest the PDF into the vector store
+### LangGraph Studio (dev server)
+
+[`langgraph.json`](langgraph.json) registers the graph as **`law_agent`**, loaded from `agent.py` (`agent`).
 
 ```bash
-uv run ingestor.py
+langgraph dev
 ```
 
-This loads `docs/codigo-de-trabajo.pdf`, splits it into chunks of 1000 characters (with 200 overlap), generates embeddings with `text-embedding-3-large`, and stores them in the `codigo_de_trabajo_guatemala` collection.
+Open the URL the CLI prints (LangGraph Studio) to run threads, inspect state, and try the agent with the configured tools and `.env`.
 
-### Query the vector store
+### Terminal (optional)
+
+Uncomment the block at the bottom of [`agent.py`](agent.py) and run:
 
 ```bash
-uv run query.py
+uv run agent.py
 ```
 
-Runs a similarity search against the stored embeddings and prints the matching documents.
+for a simple `input()`-driven session in the terminal.
