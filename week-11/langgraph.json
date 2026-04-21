@@ -1,7 +1,8 @@
 {
     "dependencies": ["."],
     "graphs": {
-        "law_agent": "./agent.py:agent"
+        "law_agent": "./agent.py:agent",
+        "text_to_sql_agent": "./text-to-sql/agent.py:agent"
     },
     "env": ".env"
 }

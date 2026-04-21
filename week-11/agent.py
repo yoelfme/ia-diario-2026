@@ -50,10 +50,3 @@ system_prompt = (
 
 # Creando el agente, pasando el modelo, las herramientas y el sistema de instrucciones
 agent = create_agent(model, tools, system_prompt=system_prompt)
-
-# query = input("Ingresa tu consulta: ")
-# for step in agent.stream(
-#     {"messages": [{"role": "user", "content": query}]},
-#     stream_mode="values",
-# ):
-#     step["messages"][-1].pretty_print()
